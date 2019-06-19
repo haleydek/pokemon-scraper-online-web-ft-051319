@@ -27,10 +27,14 @@ class Pokemon
       WHERE id = ?
       LIMIT 1;
     SQL
+<<<<<<< HEAD
     db.execute(sql, id).map do |row|
       new_pokemon = self.new(id: row[0], name: row[1], type: row[2], db: db, hp: row[3])
       new_pokemon
     end.first
+=======
+    db.execute(sql, id)
+>>>>>>> 495733693f2f43b35c9cbf197d5f99c1f3d3885f
   end
   
    def alter_hp(hp, db)
